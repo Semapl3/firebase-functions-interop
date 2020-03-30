@@ -1,3 +1,8 @@
+## 1.0.3
+
+- Updated dependency on `firebase_admin_interop` to `2.1.0` which includes messaging feature
+- Updated dependency on `node_io` to `1.0.1+1`, `node_interop` to `1.0.3`, `meta` to `1.1.8`, and dart sdk: '>=2.7.0
+
 ## 1.0.2
 
 - Added `functions.pubsub.schedule()`. Note that this requires official `firebase-functions` NPM
