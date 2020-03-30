@@ -96,3 +96,12 @@ Future<void> helloWorld(ExpressHttpRequest request) async {
     request.response.close();
   }
 }
+
+/// Example Firestore Messageing function
+void sendMessage(String topic, String title, String body, [Map<String, String> data]) {
+  var notification = NotificationMessagePayload(title: title, body: body);
+  var dataPayload = new DataMessagePayload(data: data ?? {});
+  var payload = MessagingPayload(notification: notification, data: dataPayload);
+  var app = FirebaseAdmin.instance.initializeApp();
+  app.messaging().sendToTopic(topic, payload);
+}
