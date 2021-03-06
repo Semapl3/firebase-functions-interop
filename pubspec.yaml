@@ -1,19 +1,31 @@
 name: firebase_functions_interop
 description: Firebase Cloud Functions SDK for Dart written as a JS interop wrapper for official Node.js SDK.
-version: 1.0.3
+version: 1.0.4
 homepage: https://www.github.com/pulyaevskiy/firebase-functions-interop
 author: Anatoly Pulyaevskiy <anatoly.pulyaevskiy@gmail.com>
+publish_to: none
 
 environment:
   sdk: '>=2.7.0 <3.0.0'
 
 dependencies:
-  js: ^0.6.1+1
-  meta: ^1.1.8
-  node_interop: ^1.0.3
-  node_io: ^1.0.1+2
-  node_http: ^1.0.0
-  firebase_admin_interop: ^2.1.0
+  js: ^0.6.3
+  meta: ^1.3.0
+  node_interop:
+    git:
+      url: git://github.com/Semapl3/node-interop
+      path: node_interop
+  node_io:
+    git:
+      url: git://github.com/Semapl3/node-interop
+      path: node_io
+  node_http:
+    git:
+      url: git://github.com/Semapl3/node-interop
+      path: node_http
+  firebase_admin_interop:
+    git:
+      url: git://github.com/Semapl3/firebase-admin-interop
 
 dev_dependencies:
-  test: ^1.0.0
+  test: ^1.16.5
